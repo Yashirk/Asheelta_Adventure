@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#17152e">
+  <title>Nichel: The Quest for Asheelta</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">A PIXEL-ART LOVE ADVENTURE</p>
+        <h1>Nichel <span>♡</span> Asheelta</h1>
+      </div>
+      <button id="soundBtn" class="small-btn" aria-label="Toggle sound">♪ Sound: Off</button>
+    </header>
+
+    <section class="hud" aria-label="Game status">
+      <div class="hud-item"><span class="hud-label">WORLD</span><strong id="worldName">Green Kingdom</strong></div>
+      <div class="hud-item"><span class="hud-label">HEARTS</span><strong id="hearts">♥ ♥ ♥</strong></div>
+      <div class="hud-item"><span class="hud-label">ROSES</span><strong id="roses">0 / 3</strong></div>
+      <div class="hud-item"><span class="hud-label">SCORE</span><strong id="score">0000</strong></div>
+      <div class="hud-item weapon-hud"><span class="hud-label">WEAPON</span><strong id="weaponName">Bare Hands</strong></div>
+      <div class="hud-item"><span class="hud-label">LEVEL</span><strong id="levelName">1 / 4</strong></div>
+    </section>
+
+    <section class="game-wrap">
+      <canvas id="game" width="960" height="540" aria-label="Platform game"></canvas>
+      <div id="overlay" class="overlay">
+        <div class="modal">
+          <p class="eyebrow">YOUR ADVENTURE STARTS HERE</p>
+          <h2 id="overlayTitle">The Quest for Asheelta</h2>
+          <p id="overlayText">A long road, a brave heart, and one very important question.</p>
+          <button id="startBtn" class="primary-btn">Start the quest ▶</button>
+          <p class="tiny">Move A/D or ←/→ · Jump Space/W/↑ · Attack J · Heavy attack K · Dash Shift</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mobile-controls" aria-label="Touch controls">
+      <div class="control-cluster">
+        <button class="control-btn" data-control="left" aria-label="Move left">◀</button>
+        <button class="control-btn" data-control="right" aria-label="Move right">▶</button>
+      </div>
+      <div class="control-cluster">
+        <button class="control-btn attack-btn" data-control="attack" aria-label="Attack">⚔</button>
+        <button class="control-btn heavy-btn" data-control="heavy" aria-label="Heavy attack">✦</button>
+        <button class="control-btn dash-btn" data-control="dash" aria-label="Dash">➜</button>
+        <button class="control-btn jump-btn" data-control="jump" aria-label="Jump">JUMP</button>
+      </div>
+    </section>
+
+    <section class="secret-panel">
+      <div><strong>Secret code terminal</strong><p>Find hidden chests or enter a discovered code.</p></div>
+      <form id="cheatForm" class="cheat-form"><input id="cheatInput" maxlength="24" autocomplete="off" placeholder="Enter secret code" aria-label="Secret code"><button class="small-btn" type="submit">Unlock</button></form>
+    </section>
+
+    <section class="below">
+      <div class="tip-card">
+        <span class="tip-icon">✦</span>
+        <div><strong>Quest tip</strong><p>Collect the three roses, defeat the forest slime and the dragon, then reach Asheelta at the far end.</p></div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">♡</span>
+        <div><strong>Made for Asheelta</strong><p id="personalLine">Every step is one step closer to you.</p></div>
+      </div>
+    </section>
+    <footer>Built with JavaScript + HTML Canvas · A little game made with a lot of heart.</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
