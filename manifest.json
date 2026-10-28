@@ -1,0 +1,10 @@
+{
+  "name": "Nichel: The Quest for Asheelta",
+  "short_name": "Nichel Quest",
+  "description": "A pixel-art platform adventure made for Asheelta.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#17152e",
+  "theme_color": "#17152e",
+  "orientation": "landscape"
+}
